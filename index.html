@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>时钟</title>
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/shizhong.js"></script>
+
+<style type="text/css">
+#myCanvas {
+	opacity: 0.8;
+	-webkit-animation: roll 3s;
+	animation: roll 3s;
+}
+@-webkit-keyframes roll {
+	from{-webkit-transform:rotate(360deg);opacity:0;}
+	to{-webkit-transform:rotate(0deg);opacity:0.8;}		
+}
+@keyframes roll {
+	from{transform:rotate(360deg);opacity:0;}
+	to{transform:rotate(0deg);opacity:0.8;}		
+}
+</style>
+
+</head>
+<body>
+
+<br /><br />
+
+<div style="width:150px;margin:0 auto;">
+	<canvas id="myCanvas" width="150" height="150"></canvas>
+</div>
+
+<!--  时钟悬浮网页游动
+<script> 
+var x = 50,y = 60;//图片距离顶部的位置 
+var xin = true, yin = true 
+var step = 1  //图片移动的步速 越高越快
+var delay = 10 //图片移动延时 越高越慢
+var obj=document.getElementById("myCanvas") 
+function float() { 
+var L=T=0
+var R= document.documentElement.clientWidth-obj.offsetWidth //offsetHeight 则是网页内容实际高度
+var B = document.documentElement.clientHeight-obj.offsetHeight // clientHeight 就是透过浏览器看内容的这个区域高度。
+obj.style.left = x + document.documentElement.scrollLeft + "px";
+obj.style.top = y + document.documentElement.scrollTop + "px";
+x = x + step*(xin?1:-1) 
+if (x < L) { xin = true; x = L} 
+if (x > R){ xin = false; x = R} 
+y = y + step*(yin?1:-1) 
+if (y < T) { yin = true; y = T } 
+if (y > B) { yin = false; y = B } 
+} 
+var itl= setInterval("float()", delay) 
+obj.onmouseover=function(){clearInterval(itl)} 
+obj.onmouseout=function(){itl=setInterval("float()", delay)} 
+</script>
+-->
+
+</body>
+</html>
